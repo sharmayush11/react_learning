@@ -1,13 +1,15 @@
 import {useState} from 'react'
 
-function Toggle(){
-    const [isVisible,SetisVisible] = useState[false]
+function ToggleText(){
+    const[isVisible,SetIsVisible] = useState(false)
     return(
+        
         <div>
-            <button onClick={() => SetisVisible(!isVisible)}>
-            {isVisible? "Hide":"Show"}Text
+            <button onClick = {() => SetIsVisible(!isVisible)}>
+                {isVisible? "Hide" : "Show"}Text
             </button>
+            {isVisible && <p> this is a scrt code</p>}
         </div>
     )
 }
-export default Toggle
+export default ToggleText
