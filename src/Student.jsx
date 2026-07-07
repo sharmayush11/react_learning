@@ -8,11 +8,11 @@ function Student(){
     })
 
     const changeCity = () => {
-        setStudent({...student, city : "Mumbai"})
+        setStudent({...student, grade : "B", city : "mumbai"})
     }
     return(
         <div>
-            <h2> Name : {student.name} </h2>
+            <h4> Name : {student.name} </h4>
             <p> Age : {student.grade} </p>
             <p> city : {student.city} </p>
             <button onClick={(changeCity)}> change city </button>

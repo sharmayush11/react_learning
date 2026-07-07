@@ -1,8 +1,8 @@
-import Student from "./Student.jsx"
+import InputExample from "./InputExample.jsx"
 
 function App (){
     return(
-        <Student/>
+        <InputExample/>
     )
 }
-export default Student
+export default App
