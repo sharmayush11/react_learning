@@ -1,15 +1,11 @@
 import {useState} from 'react'
 
 function ToggleText(){
-    const[isVisible,SetIsVisible] = useState(false)
+    const [Liked , isLiked] = useState(false);
     return(
-        
         <div>
-            <button onClick = {() => SetIsVisible(!isVisible)}>
-                {isVisible? "Hide" : "Show"}Text
-            </button>
-            {isVisible && <p> this is a scrt code</p>}
+            <button onClick={() => isLiked(!Liked)}> {Liked? "❤️ liked " : "👍 like "}</button>
         </div>
     )
 }
-export default ToggleText
+export default ToggleText;

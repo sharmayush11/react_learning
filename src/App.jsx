@@ -1,8 +1,8 @@
-import ToggleText from "./Toggle.text.jsx"
+import Student from "./Student.jsx"
 
-function App(){
+function App (){
     return(
-        <ToggleText/>
+        <Student/>
     )
 }
-export default App;
+export default Student
