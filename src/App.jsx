@@ -1,8 +1,8 @@
-import SimpleForm from "./SimpleForm.jsx"
+import MultipleForm from "./MultipleForm.jsx"
 
 function App (){
     return(
-        <SimpleForm/>
+        <MultipleForm/>
     )
 }
 export default App
