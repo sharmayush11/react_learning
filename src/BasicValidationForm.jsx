@@ -1,41 +1,53 @@
-import {useState} from 'react'
+import { useState } from "react";
 
 function BasicValidationForm() {
-    const[name,SetName] = useState("")
-    const[email,SetEmail] = useState("")
-    const[error,SetError] = useState("")
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [error, setError] = useState("");
 
-    const handleSubmit = (e) => {
-        e.preventDefault()
-        if (!name || email) {
-            SetError("Please fill all fields")
-        }
-        else{
-            console.log("form submitted : ", {name , email});
-            alert("Form submitted successfully")
-        }
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    // Validation
+    if (!name || !email) {
+      setError("Please fill all fields");
+      return;
     }
 
-    return(
-        <form onSubmit={handleSubmit}>
-            <h2>Basic Validation form</h2>
-            <input 
-                type="text" 
-                placeholder="enter your name" 
-                value={name}
-                onChange={(e) => SetName(e.target.value)}
-            />
-            <br />
-            <input 
-                type = "email" 
-                placeholder="enter your email"
-                value={email}
-                onChange={(e) => SetEmail(e.target.value)}
-            />
-            {error && <p style={{color : "red"}}>{error}</p>}
-            <br />
-            <button type = "submit">Submit</button>
-        </form>
-    )
+    // Error clear
+    setError("");
+
+    console.log("Form Submitted:", { name, email });
+    alert("Form Submitted Successfully");
+  };
+
+  return (
+    <form onSubmit={handleSubmit}>
+      <h2>Basic Validation Form</h2>
+
+      <input
+        type="text"
+        placeholder="Enter your name"
+        value={name}
+        onChange={(e) => setName(e.target.value)}
+      />
+
+      <br />
+
+      <input
+        type="email"
+        placeholder="Enter your email"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+      />
+
+      <br />
+
+      {error && <p style={{ color: "red" }}>{error}</p>}
+
+      <button type="submit">Submit</button>
+    </form>
+  );
 }
-export default BasicValidationForm
+
+export default BasicValidationForm;
