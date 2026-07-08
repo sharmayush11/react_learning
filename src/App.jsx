@@ -1,8 +1,8 @@
-import UncontrolledForm from "./UncontrolledForm.jsx"
+import BasicValidationForm from "./BasicValidationForm.jsx"
 
 function App (){
     return(
-        <UncontrolledForm/>
+        <BasicValidationForm/>
     )
 }
 export default App
