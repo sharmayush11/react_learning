@@ -1,8 +1,8 @@
-import InputExample from "./InputExample.jsx"
+import SimpleForm from "./SimpleForm.jsx"
 
 function App (){
     return(
-        <InputExample/>
+        <SimpleForm/>
     )
 }
 export default App
