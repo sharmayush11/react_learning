@@ -1,8 +1,8 @@
-import AdvancedForm from "./AdvancedForm.jsx"
+import UncontrolledForm from "./UncontrolledForm.jsx"
 
 function App (){
     return(
-        <AdvancedForm/>
+        <UncontrolledForm/>
     )
 }
 export default App
