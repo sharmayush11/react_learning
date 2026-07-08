@@ -1,8 +1,8 @@
-import MultipleForm from "./MultipleForm.jsx"
+import AdvancedForm from "./AdvancedForm.jsx"
 
 function App (){
     return(
-        <MultipleForm/>
+        <AdvancedForm/>
     )
 }
 export default App
