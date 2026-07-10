@@ -1,10 +1,10 @@
-import First from "./First.jsx"
+import Timer from "./Timer.jsx"
 
 function App() {
   return (
 
     <div>
-        <First/>
+        <Timer/>
     </div>
 
   )
