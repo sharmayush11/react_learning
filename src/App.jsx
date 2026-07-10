@@ -1,8 +1,12 @@
-import BasicValidationForm from "./BasicValidationForm.jsx"
+import First from "./First.jsx"
 
-function App (){
-    return(
-        <BasicValidationForm/>
-    )
+function App() {
+  return (
+
+    <div>
+        <First/>
+    </div>
+
+  )
 }
 export default App

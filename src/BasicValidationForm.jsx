@@ -17,7 +17,7 @@ function BasicValidationForm() {
     // Error clear
     setError("");
 
-    console.log("Form Submitted:", { name, email });
+    console.log("Form Submitted:", {name, email });
     alert("Form Submitted Successfully");
   };
 
