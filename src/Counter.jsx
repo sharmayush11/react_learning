@@ -12,14 +12,14 @@ function Counter(){
 }
 
     return(
-        <>
+        <div>
             <h1>Counter</h1>
             <h2>Counter value : {counter} </h2>
 
             <button onClick={addValue}> Add value </button>
             <br />
             <button onClick={clearCons}>Clear</button>
-        </>
+        </div>
     )
 }
 export default Counter
