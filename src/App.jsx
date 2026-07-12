@@ -1,12 +1,8 @@
-import Timer from "./Timer.jsx"
+import Counter from './Counter.jsx'
 
-function App() {
-  return (
-
-    <div>
-        <Timer/>
-    </div>
-
+function App(){
+  return(
+    <Counter/>
   )
 }
 export default App
