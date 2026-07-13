@@ -1,9 +1,7 @@
-import Counter from './Counter.jsx'
-import './App.css'
-
+import WindowSizeTracker from './WindowSizeTracker.jsx'
 function App(){
   return(
-    <Counter/>
+    <WindowSizeTracker/>
   )
 }
 export default App

@@ -1,16 +1,13 @@
 import {useState} from 'react'
 function Counter(){
     let [counter , setCounter] = useState(0)
-
     const addValue = () => {
         console.log("clicked" , counter);
         setCounter(counter + 1)
     }
-
     const clearCons = () => {
     setCounter(0)
 }
-
     return(
         <div>
             <h1>Counter</h1>

@@ -4,13 +4,13 @@ function First() {
 
     const [count , setCount] = useState(0)
     useEffect(() => {
+      document.title = `Count : ${count}`
         console.log("component re-rendered");
     })
-
   return (
     <div>
         <h2>Count : {count} </h2>
-        <button onClick={() => setCount(count+1)}>Increament</button>
+        <button onClick={() => setCount(count+1)}> Increament </button>
     </div>
   )
 }
