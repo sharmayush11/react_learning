@@ -1,8 +1,8 @@
-import WindowSizeTracker from './WindowSizeTracker'
+import Users from './Users'
 
 function App(){
   return(
-    <WindowSizeTracker/>
+    <Users/>
   )
 }
 export default App
