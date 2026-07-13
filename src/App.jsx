@@ -1,4 +1,5 @@
-import WindowSizeTracker from './WindowSizeTracker.jsx'
+import WindowSizeTracker from './WindowSizeTracker'
+
 function App(){
   return(
     <WindowSizeTracker/>
