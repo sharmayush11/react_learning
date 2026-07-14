@@ -1,8 +1,22 @@
-import Users from './Users'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./Home";
+import About from "./About";
+import Contact from "./Contact";
 
-function App(){
-  return(
-    <Users/>
-  )
+function App() {
+  return (
+    <BrowserRouter>
+      <a href="/">Home</a> |
+      <a href="/about">about</a> |
+      <a href="/contact">contact</a>
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
-export default App
+
+export default App;
