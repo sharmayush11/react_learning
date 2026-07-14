@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route , Link} from "react-router-dom";
 import Home from "./Home";
 import About from "./About";
 import Contact from "./Contact";
@@ -6,9 +6,12 @@ import Contact from "./Contact";
 function App() {
   return (
     <BrowserRouter>
-      <a href="/">Home</a> |
-      <a href="/about">about</a> |
-      <a href="/contact">contact</a>
+      <h1>React router example</h1>
+      <nav>
+        <Link to="/">Home</Link> |
+        <Link to="/about">About</Link> |
+        <Link to="/contact">Contact</Link>
+      </nav>
 
       <Routes>
         <Route path="/" element={<Home />} />
