@@ -1,3 +1,14 @@
+import { useNavigate } from "react-router-dom"
 export default function Home(){
-    return <h2>Welcome to Home page</h2>
+    const navigate = useNavigate();
+
+    const goToAbout = () => {
+        navigate("/about")
+    }
+    return (
+        <div>
+            <h2>Welcome to Home page</h2>
+            <button onClick={goToAbout}> Go to about</button>
+        </div>
+    )
 }
