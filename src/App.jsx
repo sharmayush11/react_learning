@@ -1,4 +1,4 @@
-import UseEE from './Timer'
+import UseEE from './UseEE'
 
 function App() {
   return (
