@@ -6,9 +6,13 @@ function Parent () {
   return (
     <div>
       <InputBox onChange={setText}/>
-      <h3>Types : {text}</h3>
+      <Display value = {text}/>
     </div>
   )
+}
+
+function Display({ value }){
+  return <h3>Typed : {value} </h3>
 }
 
 function InputBox({ onChange }){
