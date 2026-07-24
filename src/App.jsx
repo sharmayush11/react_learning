@@ -1,10 +1,9 @@
-import UseEE from './UseEE'
+import AutoSaveForm from "./AutoSaveFrom"
+
 
 function App() {
   return (
-    <>
-      <UseEE/>
-    </>
+    <AutoSaveForm/>
   )
 }
 
