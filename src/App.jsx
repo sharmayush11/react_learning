@@ -1,30 +1,28 @@
-import { useState } from 'react'
+import { createContext , useContext } from 'react'
 
-function Parent () {
-  const [text , setText] = useState("")
-
-  return (
-    <div>
-      <InputBox onChange={setText}/>
-      <Display value = {text}/>
-    </div>
-  )
-}
-
-function Display({ value }){
-  return <h3>Typed : {value} </h3>
-}
-
-function InputBox({ onChange }){
-  return <input type="text" onChange={(e) => onChange(e.target.value)}></input>
-}
-
+const UserContext = createContext()
 
 function App(){
+  const user = "Yahubaba"
+
   return(
     <>
-    <Parent/>
-  </>
+      <UserContext.Provider value={user}>
+        <Parent/>
+      </UserContext.Provider>
+    </>
   )
 }
 export default App
+
+function Parent () {
+  return <Child/>
+
+}
+function Child () {
+  return <GrandChild/>
+}
+function GrandChild () {
+  const user = useContext(UserContext)
+  return <h3>My name is {user} </h3>
+}
