@@ -1,11 +1,9 @@
-import { createContext , useContext } from 'react'
+import { useContext , createContext } from 'react'
+const UserContext = createContext();
 
-const UserContext = createContext()
-
-function App(){
+function App() {
   const user = "Yahubaba"
-
-  return(
+  return (
     <>
       <UserContext.Provider value={user}>
         <Parent/>
@@ -13,16 +11,23 @@ function App(){
     </>
   )
 }
-export default App
 
-function Parent () {
+function Parent(){
   return <Child/>
-
 }
-function Child () {
-  return <GrandChild/>
-}
-function GrandChild () {
+function Child(){
   const user = useContext(UserContext)
-  return <h3>My name is {user} </h3>
+  return (
+    <div>
+      <h1 style={{color:"blue"}}> name : { user }</h1>
+      <GrandChild/>
+    </div>
+  )
+  
 }
+function GrandChild(){
+  const time = useContext(UserContext)
+  return <h2>My channel name is {time} </h2>
+}
+
+export default App
