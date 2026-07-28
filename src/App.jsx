@@ -1,14 +1,13 @@
-import { useContext , createContext } from 'react'
+import { createContext , useContext } from 'react'
+
 const UserContext = createContext();
 
 function App() {
-  const user = "Yahubaba"
+  const user = { name : "ayusharma" , role : "frontend developer" }
   return (
-    <>
-      <UserContext.Provider value={user}>
-        <Parent/>
-      </UserContext.Provider>
-    </>
+    <UserContext.Provider value = {user}>
+      <Parent/>
+    </UserContext.Provider>
   )
 }
 
@@ -16,18 +15,11 @@ function Parent(){
   return <Child/>
 }
 function Child(){
-  const user = useContext(UserContext)
-  return (
-    <div>
-      <h1 style={{color:"blue"}}> name : { user }</h1>
-      <GrandChild/>
-    </div>
-  )
-  
+  return <ParentChild/>
 }
-function GrandChild(){
-  const time = useContext(UserContext)
-  return <h2>My channel name is {time} </h2>
+function ParentChild(){
+  const { name , role } = useContext(UserContext)
+  return <h2> Welcome ! {name} your role is {role} </h2>
 }
 
 export default App
