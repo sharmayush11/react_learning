@@ -1,25 +1,27 @@
-import { createContext , useContext } from 'react'
-
-const UserContext = createContext();
-
+import { createContext , useContext , useState } from 'react'
+ 
+const ThemeContext = createContext();
 function App() {
-  const user = { name : "ayusharma" , role : "frontend developer" }
+  const  [theme , setTheme] = useState("light")
   return (
-    <UserContext.Provider value = {user}>
-      <Parent/>
-    </UserContext.Provider>
+    <ThemeContext.Provider value = {{theme , setTheme}}>
+      <ToolBar/>
+    </ThemeContext.Provider>
   )
 }
 
-function Parent(){
-  return <Child/>
+function ToolBar(){
+  return <ThemeButton/>
 }
-function Child(){
-  return <ParentChild/>
-}
-function ParentChild(){
-  const { name , role } = useContext(UserContext)
-  return <h2> Welcome ! {name} your role is {role} </h2>
+function ThemeButton(){
+  const { theme , setTheme } = useContext(ThemeContext)
+  return(
+    <button onClick={()=> setTheme(theme === "light"?"dark":"light")} 
+    style={{
+      backgroundColor : theme === "light"?"#fff":"#333" ,
+      color : theme === "light"?"#333":"#fff" 
+    }} >Current theme : {theme}</button>
+  )
 }
 
 export default App
