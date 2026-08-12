@@ -1,12 +1,9 @@
-import NavBar from "./auth-example/Navbar"
-import { AuthProvider } from "./auth-example/AuthContext"
+import Counter from './Counter.jsx'
 
 function App() {
   return (
     <>
-      <AuthProvider>
-        <NavBar/>
-      </AuthProvider>
+      <Counter/>
     </>
   )
 }
