@@ -1,4 +1,4 @@
-import { useReducer } from "react";
+import { useReducer } from 'react';
 
 function Form(){
     function reducer(state , action){
@@ -7,25 +7,31 @@ function Form(){
             [action.name] : action.value
         }
     }
-
-    const[formDate,dispatch] = useReducer(reducer , {
+    const[formData , dispatch] = useReducer(reducer , {
         username : "",
         email : ""
     })
-    function handleChange(e){
+    function handleChanges(e){
         dispatch({
             name : e.target.name,
-            value:e.target.value
+            value : e.target.value
         })
     }
-    
     return(
-        <form>
-            input type="text" name="username" value={formDate.username} onChange={handleChange}/>
-            <input type="email" name="email" value={formDate.email} onChange={handleChange}/>
-            <h2>Username : {formDate.username}</h2>
-            <h2>Email : {formDate.email}</h2>
-        </form>
+        <div>
+            <input 
+                type="text" 
+                name="username"
+                value={formData.username}
+                onChange={handleChanges}
+            />
+            <input 
+                type="email" 
+                name="email"
+                value={formData.email}
+                onChange={handleChanges}
+            />
+        </div>
     )
 }
-export default Form
+export default value
