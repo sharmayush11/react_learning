@@ -1,9 +1,10 @@
-import Form from './Form.jsx'
+
+import WithUseMemo from './useMemo.jsx'
 
 function App() {
   return (
     <>
-      <Form/>
+      <WithUseMemo/>
     </>
   )
 }
