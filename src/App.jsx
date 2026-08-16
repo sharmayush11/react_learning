@@ -1,10 +1,11 @@
 
-import Counterrr from './Counterrr.jsx'
+// import Counterrr from './Counterrr.jsx'
+import Parent from './Parent.jsx'
 
 function App() {
   return (
     <>
-      <Counterrr/>
+      <Parent/>
     </>
   )
 }
