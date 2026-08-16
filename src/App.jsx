@@ -1,10 +1,10 @@
 
-import WithUseMemo from './useMemo.jsx'
+import Counterrr from './Counterrr.jsx'
 
 function App() {
   return (
     <>
-      <WithUseMemo/>
+      <Counterrr/>
     </>
   )
 }
