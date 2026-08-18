@@ -1,9 +1,9 @@
-import Test from './Test.jsx'
+import Example1 from './Example1.jsx'
 
 function App() {
   return (
     <>
-      <Test/>
+      <Example1/>
     </>
   )
 }
