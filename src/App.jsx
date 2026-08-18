@@ -1,9 +1,10 @@
-import Example1 from './Example1.jsx'
+import Chat from './Chat.jsx'
+import Example2 from './Example2.jsx'
 
 function App() {
   return (
     <>
-      <Example1/>
+      <Chat/>
     </>
   )
 }
