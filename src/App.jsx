@@ -1,11 +1,9 @@
-
-// import Counterrr from './Counterrr.jsx'
-import Parent from './Parent.jsx'
+import Test from './Test.jsx'
 
 function App() {
   return (
     <>
-      <Parent/>
+      <Test/>
     </>
   )
 }
