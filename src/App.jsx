@@ -1,26 +1,25 @@
-// import { createPortal } from "react-dom"
-import { useState } from "react"
-import Modal from "./Modal"
-// import PortalTest from "./PortalTest"
+import UserProfile from "./UserProfile";
+import ErrorBoundary from "./ErrorBoundary";
 
 function App() {
-  const [open, setOpen] = useState(false)
+
+  const userData = {
+    name: "John Doe",
+    age: 25,
+  };
+
+  const userData1 = null;
 
   return (
-    
-     <div style={{padding:"30px"}}>
-      <h1>App Component</h1>
-      {/* <PortalTest /> */}
-      {/* { createPortal(<h1>Portal</h1>, document.body)} */}
+    <>
+      <ErrorBoundary>
+        <UserProfile userData={userData} />
+      </ErrorBoundary>
 
-      <button onClick={() => setOpen(true)}>Open Modal</button>
-
-      <Modal isOpen={open} onClose={() => setOpen(false)}>
-          <h2>Hello from Modal</h2>
-          <p>This is a simple modal without context.</p>
-      </Modal>
-     </div>
-    
+      <ErrorBoundary fallback={<p>Error in User Profile</p>}>
+        <UserProfile userData={userData1} />
+      </ErrorBoundary>
+    </>
   )
 }
 
