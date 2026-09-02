@@ -1,9 +1,11 @@
-import Form from './Form'
-import './App.css'
+import Form from "./Form"
 
 function App() {
+
   return (
-    <Form/>
+    <>
+      <Form />
+    </>
   )
 }
 
